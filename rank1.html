@@ -20,11 +20,15 @@
         <script>
         let size = 300;
         function big() {
-            size = size + 50;
+            if(size < 600) {
+                size = size + 50;
+            }
             document.getElementById("pic").width = size;
         }
         function small() {
-            size = size - 50;
+            if(size > 100) {
+                size = size - 50;
+            }
             document.getElementById("pic").width = size;
         }
         </script>
