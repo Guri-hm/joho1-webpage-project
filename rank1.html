@@ -5,8 +5,10 @@
     <body>
         <h1>1位は○○です</h1>
 
-        <img src="rank1.jpg" width="300">
-        
+        <img id="pic" src="rank1.jpg" width="300">
+        <br>
+        <button onclick="big()">大きくする</button>
+
         <p>
             ○○のおすすめポイントは・・・。
         </p>
@@ -14,5 +16,10 @@
         <a href="index.html">
             おすすめ3選へもどる
         </a>
+        <script>
+        function big() {
+                document.getElementById("pic").width = 500;
+        }
+        </script>
     </body>
 </html>
