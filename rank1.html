@@ -8,7 +8,8 @@
         <img id="pic" src="rank1.jpg" width="300">
         <br>
         <button onclick="big()">大きくする</button>
-
+        <button onclick="small()">小さくする</button>
+        
         <p>
             ○○のおすすめポイントは・・・。
         </p>
@@ -20,6 +21,10 @@
         let size = 300;
         function big() {
             size = size + 50;
+            document.getElementById("pic").width = size;
+        }
+        function small() {
+            size = size - 50;
             document.getElementById("pic").width = size;
         }
         </script>
