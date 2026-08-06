@@ -10,12 +10,22 @@
         <div id="images"></div>
 
         <script>
+            let title = [
+                "1位 ○○",
+                "2位 △△",
+                "3位 □□"
+            ];
 
             for(let i = 1; i <= 3; i++) {
+
+                let p = document.createElement("p");
+                p.textContent = title[i - 1];
 
                 let image = document.createElement("img");
                 image.src = "rank" + i + ".jpg";
                 image.width = 300;
+                document.getElementById("images")
+                    .appendChild(p);
                 document.getElementById("images")
                     .appendChild(image);
 
