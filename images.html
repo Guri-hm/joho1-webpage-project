@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>ランキング画像一覧</title>
+    </head>
+    <body>
+        <h1>ランキング画像一覧</h1>
+        <p>
+            私のおすすめランキングの画像一覧です。
+        </p>
+        <div id="images"></div>
+
+        <script>
+
+            for(let i = 1; i <= 3; i++) {
+
+                let image = document.createElement("img");
+                image.src = "rank" + i + ".jpg";
+                image.width = 300;
+                document.getElementById("images")
+                    .appendChild(image);
+
+            }
+
+        </script>
+
+        <p>
+            <a href="index.html">
+                トップページへ戻る
+            </a>
+        </p>
+    </body>
+</html>
