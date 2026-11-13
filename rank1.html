@@ -9,7 +9,7 @@
         <br>
         <button onclick="big()">大きくする</button>
         <button onclick="small()">小さくする</button>
-        <button onclick="darkMode()">モード変更</button>
+        <button id="darkBtn" onclick="darkMode()">モード変更</button>
 
         <p>
             ○○のおすすめポイントは・・・。
@@ -36,14 +36,19 @@
         let dark = false;
 
         function darkMode() {
+            const btn = document.getElementById("darkBtn");
             if(dark == false) {
                 document.body.style.backgroundColor = "black";
                 document.body.style.color = "white";
+                document.querySelector('a').style.color = "lightblue";
+                btn.textContent = "☀️ ライトモード";
                 dark = true;
             }
             else {
                 document.body.style.backgroundColor = "white";
                 document.body.style.color = "black";
+                document.querySelector('a').style.color = "";
+                btn.textContent = "🌙 ダークモード";
                 dark = false;
             }
         } 
